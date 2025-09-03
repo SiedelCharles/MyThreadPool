@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="MyThreadPool.h" />
+    <ClInclude Include="ThreadSafeQueue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Test.cpp" />

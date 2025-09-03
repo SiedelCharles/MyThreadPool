@@ -4,6 +4,7 @@
 #include <future>
 #include <thread>
 #include <vector>
+#include <iostream>
 
 class MyThreadPool {
 public:
@@ -91,6 +92,7 @@ void MyThreadPool::stop() {
     _cv.notify_all();
     for (auto& t : _Pool) {
         if (t.joinable()) {
+            std::cout << "Thread " << t.get_id() << std::endl;
             t.join();
         }
     }
